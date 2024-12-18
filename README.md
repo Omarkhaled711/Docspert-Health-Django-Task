@@ -64,13 +64,13 @@ The project includes several API endpoints to interact with the system programma
 
 ### 3. Transfer Funds View
 
-- **Endpoint**: `/api/transfer/`
+- **Endpoint**: `/api/accounts/transfer/`
 - **Method**: `POST`
 - **Description**: Transfers funds between two accounts. Requires `from_account`, `to_account`, and `amount` parameters.
 
 ### 4. Import Accounts View
 
-- **Endpoint**: `/api/import/`
+- **Endpoint**: `/api/accounts/import/`
 - **Method**: `POST`
 - **Description**: Imports accounts from a CSV file. The file must be included in the request.
 
