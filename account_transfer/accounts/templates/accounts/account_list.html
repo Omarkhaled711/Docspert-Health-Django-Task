@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container py-4">
+    <h2>Accounts</h2>
+    
+    <!-- Search Form (Already included in navbar, no need to repeat it) -->
+
+    <!-- Account List -->
+    <ul class="list-group">
+        {% for account in accounts %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="{% url 'account_detail' account.id %}">{{ account.name }}</a> 
+            <span class="badge bg-primary rounded-pill">{{ account.balance }}$</span>
+        </li>
+        {% empty %}
+        <li class="list-group-item">No accounts found.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

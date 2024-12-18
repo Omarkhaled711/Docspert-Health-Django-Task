@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Import Accounts</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <!-- File Upload Input -->
+        <div class="mb-3">
+            <label for="file" class="form-label">Choose File</label>
+            <input type="file" name="file" id="file" class="form-control" required>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-dark">Import Accounts</button>
+    </form>
+</div>
+{% endblock %}

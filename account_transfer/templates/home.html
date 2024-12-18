@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="container-fluid bg-dark text-white py-5 text-center">
+    <h1 class="display-4">Welcome to Docspert Health</h1>
+    <p class="lead">A simple and secure platform for managing account transfers</p>
+</div>
+
+<!-- About Section -->
+<div class="container py-5">
+    <h2 class="text-center mb-4">About Us</h2>
+    <div class="row">
+        <div class="col-lg-6">
+            <h4>Our Mission</h4>
+            <p>We make it easy and safe to move money between accounts. Whether you're just managing your own finances or juggling a few different accounts, our platform helps you keep track of everything without the stress.</p>
+        </div>
+        <div class="col-lg-6">
+            <h4>Our Vision</h4>
+            <p>We want to make moving money as easy as clicking a button. With a focus on security and simplicity, we're working to make managing your money simple and accessible for everyone, no matter where you are</p>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="container py-5">
+    <h2 class="text-center mb-4">Features</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Easy Account Management</h5>
+                    <p class="card-text">Keep all your accounts in one place. You can check balances, account details, and more in just a few clicks.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Secure Transfers</h5>
+                    <p class="card-text">Your transfers are protected with encryption and security protocols, ensuring that your data and transactions are always safe.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Fast and Reliable</h5>
+                    <p class="card-text">Our platform ensures that your account transfers are processed quickly, efficiently, and reliably, anytime you need it.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action Section -->
+<div class="container py-5 text-center">
+    <h2>Get Started Today</h2>
+    <p>Start managing and transferring your accounts with ease. Simply import your accounts and you're ready to go!</p>
+    <a href="{% url 'import_accounts' %}" class="btn btn-dark btn-lg">Import Accounts</a>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Transfer Funds{% endblock %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <select name="from_account">
+        {% for account in accounts %}
+            <option value="{{ account.id }}">{{ account.name }}</option>
+        {% endfor %}
+    </select>
+    <select name="to_account">
+        {% for account in accounts %}
+            <option value="{{ account.id }}">{{ account.name }}</option>
+        {% endfor %}
+    </select>
+    <input type="number" name="amount" required>
+    <button type="submit">Transfer</button>
+</form>
+{% endblock %}
